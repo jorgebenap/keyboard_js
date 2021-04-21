@@ -17,8 +17,11 @@ function dibujarTeclado(evento) {
     case teclas.DOWN:
       console.log("abajo");
       break;
-    default:
-      console.log("Otra tecla");
+    case teclas.LEFT:
+      console.log("izquierda");
+      break;
+    case teclas.RIGHT:
+      console.log("derecha");
       break;
   }
 }
