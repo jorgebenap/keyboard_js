@@ -1,0 +1,10 @@
+{
+  "window.zoomLevel": 0,
+  "workbench.settings.editor": "json",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
