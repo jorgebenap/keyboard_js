@@ -2,33 +2,30 @@ var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 var mapa = "tile.png";
 
-var fondo = new Image();
-fondo.src = mapa;
-fondo.addEventListener("load", dibujarFondo);
+var fondo = {
+  url: "fondo.png",
+  cargaOK: false
+};
 
-var vaca = new Image();
-vaca.src = "vaca.png";
-vaca.addEventListener("load", dibujarVacas);
+var vaca = {
+  url: "vaca.png",
+  cargaOK: false
+};
 
-var cerdo = new Image();
-cerdo.src = "cerdo.png";
-cerdo.addEventListener("load", dibujarCerdos);
+var fondo.imagen = new Image();
+fondo.imagen.src = mapa;
+fondo.imagen.addEventListener("load", cargarFondo);
 
-var pollo = new Image();
-pollo.src = "pollo.png";
-pollo.addEventListener("load", dibujarPollos);
+vaca.imagen = new Image();
+vaca.imagen.src = "vaca.png";
+vaca.imagen.addEventListener("load", cargarVacas);
 
-function dibujarFondo() {
+function cargarFondo() {
+  fondo.cargaOK = true;
+}
+
+function dibujar() {
   papel.drawImage(fondo, 0, 0);
-}
-function dibujarVacas() {
-  papel.drawImage(vaca, 200, 10);
-}
-function dibujarCerdos() {
-  papel.drawImage(cerdo, 150, 300);
-}
-function dibujarPollos() {
-  papel.drawImage(pollo, 300, 150);
 }
 
 function aleatorio(min, maxi) {
